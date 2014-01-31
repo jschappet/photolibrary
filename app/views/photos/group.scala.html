@@ -1,0 +1,21 @@
+@(group: String, photos: List[Photo])
+<div class="row">
+	@for(  photo  <- photos.take(3) ) {
+            @views.html.photos.item(photo)
+	}
+</div>
+<div class="row">
+        @for(  photo  <- photos.drop(3).take(3) ) {
+            @views.html.photos.item(photo)
+        }
+</div>
+<div class="row">
+        @for(  photo  <- photos.drop(6).take(3) ) {
+            @views.html.photos.item(photo)
+        }
+</div>
+<div class="row">
+        @for(  photo  <- photos.drop(9).take(3) ) {
+            @views.html.photos.item(photo)
+        }
+</div>
